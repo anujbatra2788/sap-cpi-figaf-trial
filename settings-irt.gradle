@@ -1,0 +1,23 @@
+// This is a basic configuration which is needed for using Figaf plugins. Please rename or copy this file to settings.gradle. 
+// If you already have your settings.gradle, please insert this configuration to the appropriate places.
+
+pluginManagement {
+    repositories {
+        mavenLocal()
+        maven { url "https://jitpack.io" }
+        gradlePluginPortal()
+    }
+}
+
+include "common"
+project (":common").projectDir = file("common")
+
+include "FIGAFTESTPACKAGE"
+project (":FIGAFTESTPACKAGE").projectDir = file("FIGAFTESTPACKAGE")
+
+include "FIGAFTESTPACKAGE:iflow-SFTP_ACK_To_Common_ACK"
+project (":FIGAFTESTPACKAGE:iflow-SFTP_ACK_To_Common_ACK").projectDir = file("FIGAFTESTPACKAGE/IntegrationFlow/SFTP_ACK_To_Common_ACK")
+
+include "FIGAFTESTPACKAGE:iflow-Process_Common_Ack"
+project (":FIGAFTESTPACKAGE:iflow-Process_Common_Ack").projectDir = file("FIGAFTESTPACKAGE/IntegrationFlow/Process_Common_Ack")
+

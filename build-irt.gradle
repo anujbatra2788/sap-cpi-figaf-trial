@@ -1,0 +1,125 @@
+// This is a basic configuration which is needed for using Figaf plugins. Please rename or copy this file to build.gradle. 
+// If you already have your build.gradle, please insert this configuration to the appropriate places.
+// This configuration can be extended. Please look https://github.com/figaf/cpi-gradle-plugin and https://github.com/figaf/irt-gradle-plugin for more information.
+
+buildscript {
+    repositories {
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'com.figaf.cpi-plugin' version '2.16.RELEASE' apply false
+    id 'com.figaf.irt-plugin' version '1.2.RELEASE' apply false
+}
+
+configure(subprojects.findAll()) { sub ->
+
+    apply plugin: 'idea'
+    apply plugin: 'groovy'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    String cpiArtifactType = null
+    if (sub.name.startsWith("iflow-")) {
+        cpiArtifactType = "IFLOW"
+    } else if (sub.name.startsWith("vm-")) {
+        cpiArtifactType = "VALUE_MAPPING"
+    } else if (sub.name.startsWith("sc-")) {
+        cpiArtifactType = "SCRIPT_COLLECTION"
+    } else if (sub.name.startsWith("mm-")) {
+        cpiArtifactType = "MESSAGE_MAPPING"
+    } else if (sub.name.startsWith("fl-")) {
+        cpiArtifactType = "FUNCTION_LIBRARIES"
+    }
+
+    if (cpiArtifactType != null) {
+        apply plugin: 'com.figaf.cpi-plugin'
+
+        cpiPlugin {
+            url = project.hasProperty('cpiUrl') ? project.property('cpiUrl') : null
+            username = project.hasProperty('cpiUsername') ? project.property('cpiUsername') : null
+            password = project.hasProperty('cpiPassword') ? project.property('cpiPassword') : null
+            platformType = project.hasProperty('cloudPlatformType') ? project.property('cloudPlatformType') : null
+            loginPageUrl = project.hasProperty('loginPageUrl') ? project.property('loginPageUrl') : null
+            ssoUrl = project.hasProperty('ssoUrl') ? project.property('ssoUrl') : null
+            useCustomIdp = project.hasProperty('useCustomIdp') ? project.property('useCustomIdp').toBoolean() : false
+            samlUrl = project.hasProperty('samlUrl') ? project.property('samlUrl') : null
+            figafAgentId = project.hasProperty('figafAgentId') ? project.property('figafAgentId') : null
+            idpName = project.hasProperty('idpName') ? project.property('idpName') : null
+            idpApiClientId = project.hasProperty('idpApiClientId') ? project.property('idpApiClientId') : null
+            idpApiClientSecret = project.hasProperty('idpApiClientSecret') ? project.property('idpApiClientSecret') : null
+            oauthTokenUrl = project.hasProperty('oauthTokenUrl') ? project.property('oauthTokenUrl') : null
+            authenticationType = project.hasProperty('authenticationType') ? project.property('authenticationType') : null
+            publicApiUrl = project.hasProperty('publicApiUrl') ? project.property('publicApiUrl') : null
+            publicApiClientId = project.hasProperty('publicApiClientId') ? project.property('publicApiClientId') : null
+            publicApiClientSecret = project.hasProperty('publicApiClientSecret') ? project.property('publicApiClientSecret') : null
+            waitForStartup = true
+            sourceFilePath = "$project.projectDir".toString()
+            uploadDraftVersion = true
+            artifactType = cpiArtifactType
+            useSeparateFolderForEachArtifactType = true
+            httpClientsFactory = new com.figaf.integration.common.factory.HttpClientsFactory(
+                project.hasProperty('connectionSettings.useProxyForConnections') ? project.property('connectionSettings.useProxyForConnections').toBoolean() : false,
+                project.hasProperty('connectionSettings.connectionRequestTimeout') ? project.property('connectionSettings.connectionRequestTimeout').toInteger() : 300000,
+                project.hasProperty('connectionSettings.connectTimeout') ? project.property('connectionSettings.connectTimeout').toInteger() : 300000,
+                project.hasProperty('connectionSettings.socketTimeout') ? project.property('connectionSettings.socketTimeout').toInteger() : 300000,
+                project.hasProperty('connectionSettings.sapAirKey') ? project.property('connectionSettings.sapAirKey') : '918nyjvs'
+            )
+        }
+    }
+
+    if (cpiArtifactType == "IFLOW") {
+        apply plugin: 'com.figaf.irt-plugin'
+
+        sourceSets {
+            test {
+                groovy {
+                    srcDirs = ['src/test/groovy', 'src/main/resources/script']
+                }
+            }
+        }
+
+        dependencies {
+            testImplementation project(":common")
+            testImplementation fileTree(dir: 'src/main/resources/lib', include: '*.jar')
+        }
+
+        test {
+            dependsOn ':common:test'
+            useJUnitPlatform()
+        }
+
+        irtPlugin {
+            if (sub.hasProperty('testSuiteName')) {
+                testSuiteName = "$sub.testSuiteName".toString()
+            }
+            if (sub.hasProperty('testSuiteId')) {
+                testSuiteId = "$sub.testSuiteId".toString()
+            }
+            if (project.hasProperty('irtTestSystemId')) {
+                testSystemId = irtTestSystemId
+            }
+            url = project.hasProperty('irtUrl') ? project.property('irtUrl') : null
+            clientId = project.hasProperty('irtClientId') ? project.property('irtClientId') : null
+            clientSecret = project.hasProperty('irtClientSecret') ? project.property('irtClientSecret') : null
+            deploymentType = project.hasProperty('irtDeploymentType') ? project.property('irtDeploymentType') : null
+            synchronizeBeforeRunningTestSuite = false
+        }
+
+        task runFullFlow {
+            dependsOn test
+            dependsOn uploadArtifact
+            dependsOn deployArtifact
+            dependsOn runTestSuite
+            uploadArtifact.mustRunAfter(test)
+            deployArtifact.mustRunAfter(uploadArtifact)
+            runTestSuite.mustRunAfter(deployArtifact)
+        }
+
+    }
+}

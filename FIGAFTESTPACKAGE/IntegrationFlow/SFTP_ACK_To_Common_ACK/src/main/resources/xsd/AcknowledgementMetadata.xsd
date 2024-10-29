@@ -1,0 +1,41 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AcknowledgementMetadata">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="AcknowledgementFor" type="xs:string" />
+        <xs:element name="AcknowledgementForFileName" type="xs:string" />
+        <xs:element name="SentDateTime" type="xs:dateTime" />
+        <xs:element name="Receipt">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ExpectedBy" type="xs:dateTime" />
+              <xs:element name="Received" type="xs:boolean" />
+              <xs:element name="NoAcknowledementProcessCompleted" type="xs:boolean" />
+              <xs:element name="NotificationRecipients" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="expected" type="xs:boolean" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Processed">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ExpectedBy" type="xs:dateTime" />
+              <xs:element name="Received" type="xs:boolean" />
+              <xs:element name="NoAcknowledementProcessCompleted" type="xs:boolean" />
+              <xs:element name="NotificationRecipients" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="expected" type="xs:boolean" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Technical">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NoReceiptAckProcessor" type="xs:string" />
+              <xs:element name="NoProcessedAckProcessor" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
