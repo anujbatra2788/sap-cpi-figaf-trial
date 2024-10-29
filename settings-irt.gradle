@@ -15,9 +15,10 @@ project (":common").projectDir = file("common")
 include "FIGAFTESTPACKAGE"
 project (":FIGAFTESTPACKAGE").projectDir = file("FIGAFTESTPACKAGE")
 
-include "FIGAFTESTPACKAGE:iflow-SFTP_ACK_To_Common_ACK"
-project (":FIGAFTESTPACKAGE:iflow-SFTP_ACK_To_Common_ACK").projectDir = file("FIGAFTESTPACKAGE/IntegrationFlow/SFTP_ACK_To_Common_ACK")
 
 include "FIGAFTESTPACKAGE:iflow-Process_Common_Ack"
 project (":FIGAFTESTPACKAGE:iflow-Process_Common_Ack").projectDir = file("FIGAFTESTPACKAGE/IntegrationFlow/Process_Common_Ack")
+
+include "FIGAFTESTPACKAGE:iflow-HTTP_ACK_To_Common_ACK_copy"
+project (":FIGAFTESTPACKAGE:iflow-HTTP_ACK_To_Common_ACK_copy").projectDir = file("FIGAFTESTPACKAGE/IntegrationFlow/HTTP_ACK_To_Common_ACK_copy")
 
