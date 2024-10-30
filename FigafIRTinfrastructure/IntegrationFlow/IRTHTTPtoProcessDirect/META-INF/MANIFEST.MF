@@ -1,11 +1,9 @@
 Manifest-Version: 1.0
+Bundle-SymbolicName: IRTHTTPtoProcessDirect
 Bundle-ManifestVersion: 2
-Bundle-Name: HTTP_ACK_To_Common_ACK_copy
-Bundle-SymbolicName: HTTP_ACK_To_Common_ACK_copy
-Bundle-Version: 1.0.1
-SAP-BundleType: IntegrationFlow
-SAP-NodeType: IFLMAP
-SAP-RuntimeProfile: iflmap
+Origin-Bundle-SymbolicName: IRTHTTPtoProcessDirect
+SAP-ArtifactTrait: 
+Origin-Bundle-Version: 21.12.1
 Import-Package: com.sap.esb.application.services.cxf.interceptor,com.sap
  .esb.security,com.sap.it.op.agent.api,com.sap.it.op.agent.collector.cam
  el,com.sap.it.op.agent.collector.cxf,com.sap.it.op.agent.mpl,javax.jms,
@@ -32,6 +30,18 @@ Import-Package: com.sap.esb.application.services.cxf.interceptor,com.sap
  om.sap.esb.camel.jdbc.idempotency.reorg,javax.sql,org.apache.camel.proc
  essor.idempotent.jdbc,org.osgi.service.blueprint;version="[1.0.0,2.0.0)
  "
-Origin-Bundle-Name: HTTP_ACK_To_Common_ACK_copy
-Origin-Bundle-SymbolicName: HTTP_ACK_To_Common_ACK_copy
+Origin-Bundle-Name: Figaf HTTP to ProcessDirect
+SAP-RuntimeProfile: iflmap
+SAP-ContentMode: ConfigureOnly
+Bundle-Name: Figaf HTTP to ProcessDirect
+Bundle-Version: 21.12.1
+SAP-NodeType: IFLMAP
+Origin-ModifiedDate: 1640961098370
+SAP-BundleType: IntegrationFlow
+Import-Service: com.sap.esb.webservice.audit.log.AuditLogger,com.sap.esb
+ .security.KeyManagerFactory;multiple:=false,com.sap.esb.security.TrustM
+ anagerFactory;multiple:=false,javax.sql.DataSource;multiple:=false;filt
+ er="(dataSourceName=default)",org.apache.cxf.ws.rm.persistence.RMStore;
+ multiple:=false,com.sap.esb.camel.security.cms.SignatureSplitter;multip
+ le:=false
 

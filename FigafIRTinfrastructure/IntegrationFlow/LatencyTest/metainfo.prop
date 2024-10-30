@@ -1,0 +1,5 @@
+#Store metainfo properties
+#Wed Oct 30 04:39:16 UTC 2024
+description=\ Iflow used to test latency for Figaf DevOps Tool
+source=SAPCloudPlatformIntegrationSuite
+target=SAPCloudPlatformIntegration
