@@ -37,3 +37,9 @@ project (":FigafIRTinfrastructure:iflow-IRTHTTPtoProcessDirect").projectDir = fi
 include "FigafIRTinfrastructure:sc-FigafMigration"
 project (":FigafIRTinfrastructure:sc-FigafMigration").projectDir = file("FigafIRTinfrastructure/ScriptCollection/FigafMigration")
 
+include "DropboxAdapterforSAPIntegrationSuite"
+project (":DropboxAdapterforSAPIntegrationSuite").projectDir = file("DropboxAdapterforSAPIntegrationSuite")
+
+include "MicrosoftSharePointAdapterforSAPIntegrationSuite"
+project (":MicrosoftSharePointAdapterforSAPIntegrationSuite").projectDir = file("MicrosoftSharePointAdapterforSAPIntegrationSuite")
+

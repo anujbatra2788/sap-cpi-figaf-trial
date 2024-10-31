@@ -2,7 +2,7 @@
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xml:base="https://it-cpitrial05-design-service.cfapps.us10-001.hana.ondemand.com:443/odata/1.0/workspace.svc/">
   <id>https://it-cpitrial05-design-service.cfapps.us10-001.hana.ondemand.com:443/odata/1.0/workspace.svc/ContentPackages('FIGAFTESTPACKAGE')</id>
   <title type="text">ContentPackages</title>
-  <updated>2024-10-29T02:59:41.183Z</updated>
+  <updated>2024-10-31T02:33:35.481Z</updated>
   <category term="ContentPackageModel.ContentPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"/>
   <link href="ContentPackages('FIGAFTESTPACKAGE')" rel="edit" title="ContentPackage"/>
   <link href="ContentPackages('FIGAFTESTPACKAGE')/Artifacts" rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Artifacts" title="Artifacts" type="application/atom+xml;type=feed"/>
@@ -18,7 +18,7 @@
       <d:reg_id>818b276779bb45d2be74e753e77470a4</d:reg_id>
       <d:Featured m:null="true"/>
       <d:Scope m:null="true"/>
-      <d:Description m:null="true"/>
+      <d:Description>&lt;p&gt;&lt;/p&gt;</d:Description>
       <d:Version>1.0.0</d:Version>
       <d:Category>Integration</d:Category>
       <d:Mode>EDIT_ALLOWED</d:Mode>
@@ -37,7 +37,7 @@
       <d:PublishedBy m:null="true"/>
       <d:CreatedAt>2024-10-29T01:19:14.216</d:CreatedAt>
       <d:CreatedBy>anuj.batra@tcs.com</d:CreatedBy>
-      <d:ModifiedAt>2024-10-29T01:19:14.22</d:ModifiedAt>
+      <d:ModifiedAt>2024-10-31T01:24:14.29</d:ModifiedAt>
       <d:ModifiedBy>anuj.batra@tcs.com</d:ModifiedBy>
       <d:PartnerContent m:null="true"/>
       <d:CertifiedBySap m:null="true"/>

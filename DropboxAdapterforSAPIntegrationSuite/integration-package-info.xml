@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xml:base="https://it-cpitrial05-design-service.cfapps.us10-001.hana.ondemand.com:443/odata/1.0/workspace.svc/">
+  <id>https://it-cpitrial05-design-service.cfapps.us10-001.hana.ondemand.com:443/odata/1.0/workspace.svc/ContentPackages('DropboxAdapterforSAPIntegrationSuite')</id>
+  <title type="text">ContentPackages</title>
+  <updated>2024-10-31T02:33:35.959Z</updated>
+  <category term="ContentPackageModel.ContentPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"/>
+  <link href="ContentPackages('DropboxAdapterforSAPIntegrationSuite')" rel="edit" title="ContentPackage"/>
+  <link href="ContentPackages('DropboxAdapterforSAPIntegrationSuite')/Artifacts" rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Artifacts" title="Artifacts" type="application/atom+xml;type=feed"/>
+  <link href="ContentPackages('DropboxAdapterforSAPIntegrationSuite')/Files" rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Files" title="Files" type="application/atom+xml;type=feed"/>
+  <link href="ContentPackages('DropboxAdapterforSAPIntegrationSuite')/Urls" rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Urls" title="Urls" type="application/atom+xml;type=feed"/>
+  <link href="ContentPackages('DropboxAdapterforSAPIntegrationSuite')/MediaLinks" rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/MediaLinks" title="MediaLinks" type="application/atom+xml;type=feed"/>
+  <link href="ContentPackages('DropboxAdapterforSAPIntegrationSuite')/Licenses" rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Licenses" title="Licenses" type="application/atom+xml;type=feed"/>
+  <content type="application/xml">
+    <m:properties>
+      <d:TechnicalName>DropboxAdapterforSAPIntegrationSuite</d:TechnicalName>
+      <d:DisplayName>Dropbox Adapter for SAP Integration Suite</d:DisplayName>
+      <d:ShortText>Dropbox adapter can be used to integrate your Dropbox account with other applications to exchange files.</d:ShortText>
+      <d:reg_id>6e8f2bc0d6654691afcf727224800c95</d:reg_id>
+      <d:Featured m:null="true"/>
+      <d:Scope m:null="true"/>
+      <d:Description>&lt;p&gt;SAP provides Dropbox adapter allowing users to access all the features supported by Dropbox API. It is available with the standard and premium edition of SAP Integration Suite.The adapter is available only for certain service plans of the SAP Integration Suite. For more information, see SAP Note &lt;a href="https://launchpad.support.sap.com/#/notes/3188446" rel="nofollow"&gt;3188446&lt;/a&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Product Features:&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Downloads a file from a Dropbox account.&lt;/li&gt; &lt;li&gt;Downloads a folder from the Dropbox account, as a zip file.&lt;/li&gt; &lt;li&gt;Copy's a file or folder to a different location in the Dropbox.&lt;/li&gt; &lt;li&gt;Creates a folder at a given path in the Dropbox account.&lt;/li&gt; &lt;li&gt;Deletes the file or folder at a given path.&lt;/li&gt; &lt;li&gt;Get's a temporary link to stream content of a file.&lt;/li&gt; &lt;li&gt;Returns the metadata for a file or folder.&lt;/li&gt; &lt;li&gt;Get's the space usage information for the current user's account.&lt;/li&gt; &lt;li&gt;Returns the contents of a folder.&lt;/li&gt; &lt;li&gt;Returns revisions for files based on a file path or a file id.&lt;/li&gt; &lt;li&gt;Moves a file or folder to a different location in the user's Dropbox.&lt;/li&gt; &lt;li&gt;Add/update/remove properties associated with the supplied file and templates.&lt;/li&gt; &lt;li&gt;Searches for files and folders.&lt;/li&gt; &lt;li&gt;Creates a new file with the contents provided in the request.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;strong&gt;Key Features:&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;OAuth based Authorization.&lt;/li&gt; &lt;li&gt;Dynamic header and property support in the receiver adapter.&lt;/li&gt; &lt;li&gt;Desired response type from Dropbox (JSON/XML).&lt;/li&gt; &lt;li&gt;Auto Rename for existing Files/Folders.&lt;/li&gt; &lt;li&gt;Post processing file handling.&lt;/li&gt; &lt;/ul&gt;</d:Description>
+      <d:Version>1.0.6</d:Version>
+      <d:Category>Integration</d:Category>
+      <d:Mode>READ_ONLY</d:Mode>
+      <d:Vendor>SAP</d:Vendor>
+      <d:OrgName>HCL_TECHNOLOGIES_OEM</d:OrgName>
+      <d:BusinessProcess m:null="true"/>
+      <d:SupportedPlatforms>SAP HANA Cloud Integration</d:SupportedPlatforms>
+      <d:Products>Dropbox,SAPCloudPlatformIntegration,SAPCloudPlatformIntegrationSuite</d:Products>
+      <d:Industries m:null="true"/>
+      <d:LineOfBusiness m:null="true"/>
+      <d:Keywords>Adapter,Adapter for SAP,Dropbox,Dropbox Adapter,Dropbox Suite,Integration Suite,SAP Integration Suite,Suite</d:Keywords>
+      <d:Countries m:null="true"/>
+      <d:AvgRating>0.0</d:AvgRating>
+      <d:RatingCount>0</d:RatingCount>
+      <d:PublishedAt m:null="true"/>
+      <d:PublishedBy m:null="true"/>
+      <d:CreatedAt>2024-10-31T01:26:04.186</d:CreatedAt>
+      <d:CreatedBy>anuj.batra@tcs.com</d:CreatedBy>
+      <d:ModifiedAt>2024-10-31T01:26:04.194</d:ModifiedAt>
+      <d:ModifiedBy>anuj.batra@tcs.com</d:ModifiedBy>
+      <d:PartnerContent>false</d:PartnerContent>
+      <d:CertifiedBySap>false</d:CertifiedBySap>
+      <d:CommunityContent>false</d:CommunityContent>
+      <d:LicenseType m:null="true"/>
+      <d:SupportInfo>LOD-HCI-PI-CON-TPHL</d:SupportInfo>
+      <d:AdditionalAttributes>{"packageType":"AdapterPackage"}</d:AdditionalAttributes>
+      <d:CommercialContent m:null="true"/>
+      <d:AppCenterTechName m:null="true"/>
+      <d:PartnerCRMBP m:null="true"/>
+      <d:Type m:null="true"/>
+      <d:SubType m:null="true"/>
+    </m:properties>
+  </content>
+</entry>
