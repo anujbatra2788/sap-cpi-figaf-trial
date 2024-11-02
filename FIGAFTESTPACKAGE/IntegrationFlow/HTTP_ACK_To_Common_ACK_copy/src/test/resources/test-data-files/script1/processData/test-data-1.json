@@ -1,0 +1,12 @@
+{
+  "input": {
+    "headers": {},
+    "properties": {},
+    "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<AcknowledgementMetadata>\n    <AcknowledgementFor>Orders</AcknowledgementFor>\n    <AcknowledgementForFileName>Order_1.xml</AcknowledgementForFileName>\n    <SentDateTime>22-03-2024T22:32:22</SentDateTime>\n    <Receipt expected=\"true\">\n        <ExpectedBy>22-03-2024T22:32:22</ExpectedBy>\n        <Received>false</Received>\n        <NoAcknowledementProcessCompleted>false</NoAcknowledementProcessCompleted>\n        <NotificationRecipients>anuj.batra@tcs.com</NotificationRecipients>\n    </Receipt>\n    <Processed expected=\"true\">\n        <ExpectedBy>22-03-2024T22:32:22</ExpectedBy>\n        <Received>false</Received>\n        <NoAcknowledementProcessCompleted>false</NoAcknowledementProcessCompleted>\n        <NotificationRecipients>anuj.batra@tcs.com</NotificationRecipients>\n    </Processed>\n    <Technical>\n        <NoReceiptAckProcessor>/cba/acknowledgements/noFileAck</NoReceiptAckProcessor>\n        <NoProcessedAckProcessor>/cba/acknowledgements/noFileAck</NoProcessedAckProcessor>\n    </Technical>\n</AcknowledgementMetadata>"
+  },
+  "output": {
+    "headers": {},
+    "properties": {},
+    "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><AcknowledgementMetadata>\n    \n  <AcknowledgementFor>ORDERS</AcknowledgementFor>\n    \n  <AcknowledgementForFileName>Order_1.xml</AcknowledgementForFileName>\n    \n  <SentDateTime>22-03-2024T22:32:22</SentDateTime>\n    \n  <Receipt expected=\"true\">\n        \n    <ExpectedBy>22-03-2024T22:32:22</ExpectedBy>\n        \n    <Received>false</Received>\n        \n    <NoAcknowledementProcessCompleted>false</NoAcknowledementProcessCompleted>\n        \n    <NotificationRecipients>anuj.batra@tcs.com</NotificationRecipients>\n      \n  </Receipt>\n    \n  <Processed expected=\"true\">\n        \n    <ExpectedBy>22-03-2024T22:32:22</ExpectedBy>\n        \n    <Received>false</Received>\n        \n    <NoAcknowledementProcessCompleted>false</NoAcknowledementProcessCompleted>\n        \n    <NotificationRecipients>anuj.batra@tcs.com</NotificationRecipients>\n      \n  </Processed>\n    \n  <Technical>\n        \n    <NoReceiptAckProcessor>/cba/acknowledgements/noFileAck</NoReceiptAckProcessor>\n        \n    <NoProcessedAckProcessor>/cba/acknowledgements/noFileAck</NoProcessedAckProcessor>\n      \n  </Technical>\n  \n</AcknowledgementMetadata>\n"
+  }
+}

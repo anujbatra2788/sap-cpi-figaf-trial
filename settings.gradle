@@ -1,0 +1,45 @@
+// This is a basic configuration which is needed for using Figaf plugins. Please rename or copy this file to settings.gradle. 
+// If you already have your settings.gradle, please insert this configuration to the appropriate places.
+
+pluginManagement {
+    repositories {
+        mavenLocal()
+        maven { url "https://jitpack.io" }
+        gradlePluginPortal()
+    }
+}
+
+include "common"
+project (":common").projectDir = file("common")
+
+include "FIGAFTESTPACKAGE"
+project (":FIGAFTESTPACKAGE").projectDir = file("FIGAFTESTPACKAGE")
+
+
+include "FIGAFTESTPACKAGE:iflow-Process_Common_Ack"
+project (":FIGAFTESTPACKAGE:iflow-Process_Common_Ack").projectDir = file("FIGAFTESTPACKAGE/IntegrationFlow/Process_Common_Ack")
+
+include "FIGAFTESTPACKAGE:iflow-HTTP_ACK_To_Common_ACK_copy"
+project (":FIGAFTESTPACKAGE:iflow-HTTP_ACK_To_Common_ACK_copy").projectDir = file("FIGAFTESTPACKAGE/IntegrationFlow/HTTP_ACK_To_Common_ACK_copy")
+
+include "FigafIRTinfrastructure"
+project (":FigafIRTinfrastructure").projectDir = file("FigafIRTinfrastructure")
+
+include "FigafIRTinfrastructure:iflow-LatencyTest"
+project (":FigafIRTinfrastructure:iflow-LatencyTest").projectDir = file("FigafIRTinfrastructure/IntegrationFlow/LatencyTest")
+
+include "FigafIRTinfrastructure:iflow-Figaf_HTTP_to_JMS"
+project (":FigafIRTinfrastructure:iflow-Figaf_HTTP_to_JMS").projectDir = file("FigafIRTinfrastructure/IntegrationFlow/Figaf_HTTP_to_JMS")
+
+include "FigafIRTinfrastructure:iflow-IRTHTTPtoProcessDirect"
+project (":FigafIRTinfrastructure:iflow-IRTHTTPtoProcessDirect").projectDir = file("FigafIRTinfrastructure/IntegrationFlow/IRTHTTPtoProcessDirect")
+
+include "FigafIRTinfrastructure:sc-FigafMigration"
+project (":FigafIRTinfrastructure:sc-FigafMigration").projectDir = file("FigafIRTinfrastructure/ScriptCollection/FigafMigration")
+
+include "DropboxAdapterforSAPIntegrationSuite"
+project (":DropboxAdapterforSAPIntegrationSuite").projectDir = file("DropboxAdapterforSAPIntegrationSuite")
+
+include "MicrosoftSharePointAdapterforSAPIntegrationSuite"
+project (":MicrosoftSharePointAdapterforSAPIntegrationSuite").projectDir = file("MicrosoftSharePointAdapterforSAPIntegrationSuite")
+

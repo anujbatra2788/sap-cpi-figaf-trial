@@ -13,7 +13,13 @@ def Message processData(Message message) {
     if (ackFor.startsWith("Order")) {
         root.'**'.find { it.name() == 'AcknowledgementFor' }.value = ackFor.toUpperCase()
     }
-    
+
+
+    def xmlOutput = new StringWriter()
+    def xmlNodePrinter = new XmlNodePrinter(new PrintWriter(xmlOutput))
+    xmlNodePrinter.print(root)
+
+
     def xml = XmlUtil.serialize(root)
     message.setBody(xml)
     return message;
