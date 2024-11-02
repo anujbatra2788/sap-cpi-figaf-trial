@@ -297,7 +297,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>fileName</key>
-                    <value>${header.CamelFileName}</value>
+                    <value>ack.xml</value>
                 </ifl:property>
                 <ifl:property>
                     <key>Description</key>
@@ -397,7 +397,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>fileAppendTimeStamp</key>
-                    <value>0</value>
+                    <value>1</value>
                 </ifl:property>
                 <ifl:property>
                     <key>credential_name</key>
