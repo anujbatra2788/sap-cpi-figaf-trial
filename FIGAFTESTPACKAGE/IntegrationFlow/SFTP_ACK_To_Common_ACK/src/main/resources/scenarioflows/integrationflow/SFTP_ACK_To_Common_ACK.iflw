@@ -185,7 +185,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>fastExistsCheck</key>
-                    <value>1</value>
+                    <value>0</value>
                 </ifl:property>
                 <ifl:property>
                     <key>ComponentSWCVId</key>
