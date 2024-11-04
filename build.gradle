@@ -126,11 +126,28 @@ configure(subprojects.findAll()) { sub ->
         jacocoTestReport {
             dependsOn test // Ensure tests run before generating report
             reports {
-                xml.required = false // Disable XML report
-                html.enabled = true // Enable HTML report
-                csv.enabled = false // Disable CSV report
+                xml.required.set(false)
+                csv.required.set(false)
+                html.required.set(true)
             }
         }
+
+
+        tasks.register("generateCoverageReport", JacocoReport) {
+            dependsOn test // Ensure tests run before generating report
+
+            // Set the source sets for which you want to generate coverage
+            sourceSets sourceSets.main
+
+            executionData fileTree(dir: "${buildDir}/jacoco", include: ['*.exec'])
+
+            reports {
+                xml.required.set(false)
+                csv.required.set(false)
+                html.required.set(true)
+            }
+        }
+
 
     }
 }
