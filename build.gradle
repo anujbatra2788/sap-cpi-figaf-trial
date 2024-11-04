@@ -123,5 +123,14 @@ configure(subprojects.findAll()) { sub ->
             runTestSuite.mustRunAfter(deployArtifact)
         }
 
+        jacocoTestReport {
+            dependsOn test // Ensure tests run before generating report
+            reports {
+                xml.required = false // Disable XML report
+                html.enabled = true // Enable HTML report
+                csv.enabled = false // Disable CSV report
+            }
+        }
+
     }
 }
