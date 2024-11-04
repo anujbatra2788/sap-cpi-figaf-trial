@@ -1,12 +1,4 @@
-//plugins {
-//    id 'java'
-//    id 'jacoco' // for code coverage, optional if needed
-//}
-
-
 apply plugin: 'java-library'
-//apply plugin: 'jacoco'
-
 
 dependencies {
     api('org.codehaus.groovy:groovy-all:2.5.7') {
