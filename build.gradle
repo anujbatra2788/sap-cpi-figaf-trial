@@ -12,12 +12,14 @@ buildscript {
 plugins {
     id 'com.figaf.cpi-plugin' version '2.16.RELEASE' apply false
     id 'com.figaf.irt-plugin' version '1.2.RELEASE' apply false
+    id 'jacoco'
 }
 
 configure(subprojects.findAll()) { sub ->
 
     apply plugin: 'idea'
     apply plugin: 'groovy'
+    apply plugin: 'jacoco'
 
     repositories {
         mavenLocal()
