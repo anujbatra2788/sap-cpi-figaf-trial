@@ -78,7 +78,7 @@ class processData_Unit {
         message.setBody(body)
         MessageImpl actualMessage = script.processData(message);
 
-        String actualValue = XMLUtils.getValueFromXPath((String)actualMessage.getBody(), "//AcknowledgementFor")
+        String actualValue = XMLUtils.getValueFromField((String)actualMessage.getBody(), "AcknowledgementFor")
 
 
         assertEquals("ORDERS", actualValue)
