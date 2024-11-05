@@ -70,7 +70,7 @@ class processData_Unit extends Specification {
 
         then: "we get the AcknowledgementFor tag populated with the uppercase of its own value"
         def result = true;
-        String actualValue = XMLUtils.getValueFromField((String)actualMessage.getBody(), "AcknowledgementFor")
+        String actualValue = XMLUtils.getValueFromField(this.msg.getBody(String), "AcknowledgementFor")
         assertEquals("ORDERS", actualValue)
         result == true;
     }
