@@ -1,6 +1,7 @@
 package com.figaf.script1
 
 import com.figaf.MessageImpl
+import com.figaf.utils.XMLUtils
 import com.sap.it.api.msglog.MessageLog
 import com.sap.it.api.msglog.MessageLogFactory
 import groovy.json.JsonSlurper
@@ -20,6 +21,8 @@ import static org.mockito.BDDMockito.given
 @ExtendWith(MockitoExtension)
 class processData_Unit {
 
+    private def script
+
     static GroovyShell shell = null
     static jsonSlurper = null
 
@@ -36,6 +39,10 @@ class processData_Unit {
         given(messageLogFactory.getMessageLog(any()))
                 .willReturn(messageLog)
         message = new MessageImpl()
+
+        Binding binding = new Binding()
+        GroovyShell shell = new GroovyShell(binding)
+        script = shell.parse(new File("src/main/resources/script/script1.groovy"))
     }
 
     @BeforeAll
@@ -69,12 +76,12 @@ class processData_Unit {
     </Technical>
 </AcknowledgementMetadata>'''
         message.setBody(body)
-        MessageImpl actualMessage = processData(message);
+        MessageImpl actualMessage = script.processData(message);
+
+        String actualValue = XMLUtils.getValueFromXPath((String)actualMessage.getBody(), "//AcknowledgementFor")
 
 
-
-
-        assertEquals("ORDERS", )
+        assertEquals("ORDERS", actualValue)
     }
 
 }
