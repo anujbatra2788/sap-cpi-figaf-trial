@@ -52,7 +52,7 @@ class processData_Unit {
     }
 
     @Test
-    void testProcessDataWithSampleBody() {
+    void testProcessDataWithSampleBodyOfOrders() {
         def body = '''<?xml version="1.0" encoding="UTF-8"?>
 <AcknowledgementMetadata>
     <AcknowledgementFor>Orders</AcknowledgementFor>
@@ -82,6 +82,39 @@ class processData_Unit {
 
 
         assertEquals("ORDERS", actualValue)
+    }
+
+    @Test
+    void testProcessDataWithSampleBodyOfPayments() {
+        def body = '''<?xml version="1.0" encoding="UTF-8"?>
+<AcknowledgementMetadata>
+    <AcknowledgementFor>Payments</AcknowledgementFor>
+    <AcknowledgementForFileName>Order_1.xml</AcknowledgementForFileName>
+    <SentDateTime>22-03-2024T22:32:22</SentDateTime>
+    <Receipt expected="true">
+        <ExpectedBy>22-03-2024T22:32:22</ExpectedBy>
+        <Received>false</Received>
+        <NoAcknowledementProcessCompleted>false</NoAcknowledementProcessCompleted>
+        <NotificationRecipients>anuj.batra@tcs.com</NotificationRecipients>
+    </Receipt>
+    <Processed expected="true">
+        <ExpectedBy>22-03-2024T22:32:22</ExpectedBy>
+        <Received>false</Received>
+        <NoAcknowledementProcessCompleted>false</NoAcknowledementProcessCompleted>
+        <NotificationRecipients>anuj.batra@tcs.com</NotificationRecipients>
+    </Processed>
+    <Technical>
+        <NoReceiptAckProcessor>/cba/acknowledgements/noFileAck</NoReceiptAckProcessor>
+        <NoProcessedAckProcessor>/cba/acknowledgements/noFileAck</NoProcessedAckProcessor>
+    </Technical>
+</AcknowledgementMetadata>'''
+        message.setBody(body)
+        MessageImpl actualMessage = script.processData(message);
+
+        String actualValue = XMLUtils.getValueFromField((String)actualMessage.getBody(), "AcknowledgementFor")
+
+
+        assertEquals("Payments", actualValue)
     }
 
 }
