@@ -19,7 +19,7 @@ import static org.mockito.BDDMockito.given
 // src/main/resources/script/script1.groovy
 
 @ExtendWith(MockitoExtension)
-class processData_Unit {
+class processData_Unit extends Speci{
 
     private static def script
 
