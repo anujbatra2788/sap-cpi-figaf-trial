@@ -1,5 +1,6 @@
-package com.figaf
+package com.figaf.script1
 
+import com.figaf.AbstractGroovyTest
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.ValueSource
 
