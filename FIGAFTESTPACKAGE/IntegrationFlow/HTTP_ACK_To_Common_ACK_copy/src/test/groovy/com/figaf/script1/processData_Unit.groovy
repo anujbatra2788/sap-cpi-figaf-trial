@@ -38,7 +38,7 @@ class processData_Unit extends Specification {
         this.msg = new MessageImpl()
     }
 
-    def "Acknowledgement of Orders has a uppercase for AcknowledgementForTag"() {
+    def "Acknowledgement of Orders has a uppercase for AcknowledgementFor Tag"() {
         def body = '''<?xml version="1.0" encoding="UTF-8"?>
             <AcknowledgementMetadata>
                 <AcknowledgementFor>Orders</AcknowledgementFor>
@@ -110,99 +110,4 @@ class processData_Unit extends Specification {
         String actualValue = XMLUtils.getValueFromField(this.msg.getBody(String), "AcknowledgementFor")
         assertEquals("Payments", actualValue)
     }
-
-
-//    static jsonSlurper = null
-//
-//    @Mock(lenient = true)
-//    MessageLogFactory messageLogFactory
-//
-//    @Mock
-//    MessageLog messageLog
-//
-//    MessageImpl message;
-//
-//    @BeforeEach
-//    void beforeEach() {
-//        given(messageLogFactory.getMessageLog(any()))
-//                .willReturn(messageLog)
-//        message = new MessageImpl()
-//    }
-//
-//    @BeforeAll
-//    static void setUp() {
-//        shell = new GroovyShell()
-//        jsonSlurper = new JsonSlurper()
-//
-//        Binding binding = new Binding()
-//        GroovyShell shell = new GroovyShell(binding)
-//        script = shell.parse(new File("src/main/resources/script/script1.groovy"))
-//    }
-//
-//    @Test
-//    void testProcessDataWithSampleBodyOfOrders() {
-//        def body = '''<?xml version="1.0" encoding="UTF-8"?>
-//<AcknowledgementMetadata>
-//    <AcknowledgementFor>Orders</AcknowledgementFor>
-//    <AcknowledgementForFileName>Order_1.xml</AcknowledgementForFileName>
-//    <SentDateTime>22-03-2024T22:32:22</SentDateTime>
-//    <Receipt expected="true">
-//        <ExpectedBy>22-03-2024T22:32:22</ExpectedBy>
-//        <Received>false</Received>
-//        <NoAcknowledementProcessCompleted>false</NoAcknowledementProcessCompleted>
-//        <NotificationRecipients>anuj.batra@tcs.com</NotificationRecipients>
-//    </Receipt>
-//    <Processed expected="true">
-//        <ExpectedBy>22-03-2024T22:32:22</ExpectedBy>
-//        <Received>false</Received>
-//        <NoAcknowledementProcessCompleted>false</NoAcknowledementProcessCompleted>
-//        <NotificationRecipients>anuj.batra@tcs.com</NotificationRecipients>
-//    </Processed>
-//    <Technical>
-//        <NoReceiptAckProcessor>/cba/acknowledgements/noFileAck</NoReceiptAckProcessor>
-//        <NoProcessedAckProcessor>/cba/acknowledgements/noFileAck</NoProcessedAckProcessor>
-//    </Technical>
-//</AcknowledgementMetadata>'''
-//        message.setBody(body)
-//        MessageImpl actualMessage = script.processData(message);
-//        actualMessage.getProperties().containsKey()
-//        String actualValue = XMLUtils.getValueFromField((String)actualMessage.getBody(), "AcknowledgementFor")
-//
-//
-//        assertEquals("ORDERS", actualValue)
-//    }
-//
-//    @Test
-//    void testProcessDataWithSampleBodyOfPayments() {
-//        def body = '''<?xml version="1.0" encoding="UTF-8"?>
-//<AcknowledgementMetadata>
-//    <AcknowledgementFor>Payments</AcknowledgementFor>
-//    <AcknowledgementForFileName>Order_1.xml</AcknowledgementForFileName>
-//    <SentDateTime>22-03-2024T22:32:22</SentDateTime>
-//    <Receipt expected="true">
-//        <ExpectedBy>22-03-2024T22:32:22</ExpectedBy>
-//        <Received>false</Received>
-//        <NoAcknowledementProcessCompleted>false</NoAcknowledementProcessCompleted>
-//        <NotificationRecipients>anuj.batra@tcs.com</NotificationRecipients>
-//    </Receipt>
-//    <Processed expected="true">
-//        <ExpectedBy>22-03-2024T22:32:22</ExpectedBy>
-//        <Received>false</Received>
-//        <NoAcknowledementProcessCompleted>false</NoAcknowledementProcessCompleted>
-//        <NotificationRecipients>anuj.batra@tcs.com</NotificationRecipients>
-//    </Processed>
-//    <Technical>
-//        <NoReceiptAckProcessor>/cba/acknowledgements/noFileAck</NoReceiptAckProcessor>
-//        <NoProcessedAckProcessor>/cba/acknowledgements/noFileAck</NoProcessedAckProcessor>
-//    </Technical>
-//</AcknowledgementMetadata>'''
-//        message.setBody(body)
-//        MessageImpl actualMessage = script.processData(message);
-//
-//        String actualValue = XMLUtils.getValueFromField((String)actualMessage.getBody(), "AcknowledgementFor")
-//
-//
-//        assertEquals("Payments", actualValue)
-//    }
-
 }
