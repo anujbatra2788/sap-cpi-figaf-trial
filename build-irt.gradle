@@ -94,6 +94,7 @@ configure(subprojects.findAll()) { sub ->
         test {
             dependsOn ':common:test'
             useJUnitPlatform()
+            finalizedBy jacocoTestReport
         }
 
         irtPlugin {
@@ -124,6 +125,11 @@ configure(subprojects.findAll()) { sub ->
         }
 
         jacocoTestReport {
+
+            sourceSets sourceSets.test
+
+            executionData fileTree(dir: "${buildDir}/jacoco", include: ['*.exec'])
+
             dependsOn test // Ensure tests run before generating report
             reports {
                 xml.required.set(false)
