@@ -77,7 +77,7 @@ class processData_Unit {
 </AcknowledgementMetadata>'''
         message.setBody(body)
         MessageImpl actualMessage = script.processData(message);
-
+        actualMessage.getProperties().containsKey()
         String actualValue = XMLUtils.getValueFromField((String)actualMessage.getBody(), "AcknowledgementFor")
 
 
