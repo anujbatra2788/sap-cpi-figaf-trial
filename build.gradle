@@ -99,7 +99,6 @@ configure(subprojects.findAll()) { sub ->
             jacoco {
                 classDumpDir = layout.buildDirectory.dir('jacoco/classpathdumps').get().asFile
                 dumpOnExit = true
-                excludes ["com/figaf/AbstractGroovyTest", "com/figaf/GroovyTestData", "com/figaf/MessageImpl", "com/figaf/MessageTestData"]
             }
         }
 
