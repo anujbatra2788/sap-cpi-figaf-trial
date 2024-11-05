@@ -61,7 +61,18 @@ class processData_Unit extends Specification {
                     <NoProcessedAckProcessor>/cba/acknowledgements/noFileAck</NoProcessedAckProcessor>
                 </Technical>
             </AcknowledgementMetadata>'''
-        
+
+        given: "Orders Acknowledgement message"
+        this.msg.setBody(body);
+
+        when: "we execute the Groovy script"
+        script.processData(this.msg)
+
+        then: "we get the AcknowledgementFor tag populated with the uppercase of its own value"
+        def result = true;
+        String actualValue = XMLUtils.getValueFromField((String)actualMessage.getBody(), "AcknowledgementFor")
+        assertEquals("ORDERS", actualValue)
+        result == true;
     }
 
 
