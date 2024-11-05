@@ -96,10 +96,6 @@ configure(subprojects.findAll()) { sub ->
             useJUnitPlatform()
             finalizedBy jacocoTestReport
 
-            jacoco {
-                classDumpDir = layout.buildDirectory.dir('jacoco/classpathdumps').get().asFile
-                dumpOnExit = true
-            }
         }
 
         irtPlugin {

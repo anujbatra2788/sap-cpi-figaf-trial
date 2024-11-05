@@ -72,7 +72,43 @@ class processData_Unit extends Specification {
         def result = true;
         String actualValue = XMLUtils.getValueFromField(this.msg.getBody(String), "AcknowledgementFor")
         assertEquals("ORDERS", actualValue)
-        result == true;
+    }
+
+
+    def "Acknowledgement of Payments should not change the AcknowledgementFor Tag"() {
+        def body = '''<?xml version="1.0" encoding="UTF-8"?>
+            <AcknowledgementMetadata>
+                <AcknowledgementFor>Payments</AcknowledgementFor>
+                <AcknowledgementForFileName>Order_1.xml</AcknowledgementForFileName>
+                <SentDateTime>22-03-2024T22:32:22</SentDateTime>
+                <Receipt expected="true">
+                    <ExpectedBy>22-03-2024T22:32:22</ExpectedBy>
+                    <Received>false</Received>
+                    <NoAcknowledementProcessCompleted>false</NoAcknowledementProcessCompleted>
+                    <NotificationRecipients>anuj.batra@tcs.com</NotificationRecipients>
+                </Receipt>
+                <Processed expected="true">
+                    <ExpectedBy>22-03-2024T22:32:22</ExpectedBy>
+                    <Received>false</Received>
+                    <NoAcknowledementProcessCompleted>false</NoAcknowledementProcessCompleted>
+                    <NotificationRecipients>anuj.batra@tcs.com</NotificationRecipients>
+                </Processed>
+                <Technical>
+                    <NoReceiptAckProcessor>/cba/acknowledgements/noFileAck</NoReceiptAckProcessor>
+                    <NoProcessedAckProcessor>/cba/acknowledgements/noFileAck</NoProcessedAckProcessor>
+                </Technical>
+            </AcknowledgementMetadata>'''
+
+        given: "Orders Acknowledgement message"
+        this.msg.setBody(body);
+
+        when: "we execute the Groovy script"
+        script.processData(this.msg)
+
+        then: "we get the AcknowledgementFor tag populated with the of its own value without any change"
+        def result = true;
+        String actualValue = XMLUtils.getValueFromField(this.msg.getBody(String), "AcknowledgementFor")
+        assertEquals("Payments", actualValue)
     }
 
 
