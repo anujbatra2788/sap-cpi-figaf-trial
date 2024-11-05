@@ -98,6 +98,7 @@ configure(subprojects.findAll()) { sub ->
 
             jacoco {
                 classDumpDir = layout.buildDirectory.dir('jacoco/classpathdumps').get().asFile
+                dumpOnExit = true
             }
         }
 
