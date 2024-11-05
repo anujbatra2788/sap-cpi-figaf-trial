@@ -126,7 +126,7 @@ configure(subprojects.findAll()) { sub ->
 
         jacocoTestReport {
 
-            sourceSets sourceSets.test.groovy.srcDirs
+            sourceSets sourceSets.test
 
             executionData fileTree(dir: "${buildDir}/jacoco", include: ['*.exec'])
 
@@ -143,7 +143,7 @@ configure(subprojects.findAll()) { sub ->
             dependsOn test // Ensure tests run before generating report
 
             // Set the source sets for which you want to generate coverage
-            sourceSets sourceSets.test.groovy.srcDirs
+            sourceSets sourceSets.test
 
             executionData fileTree(dir: "${buildDir}/jacoco", include: ['*.exec'])
 
