@@ -95,7 +95,6 @@ configure(subprojects.findAll()) { sub ->
             dependsOn ':common:test'
             useJUnitPlatform()
             finalizedBy jacocoTestReport
-            finalizedBy generateCoverageReport
         }
 
         irtPlugin {
@@ -141,13 +140,7 @@ configure(subprojects.findAll()) { sub ->
             dependsOn test // Ensure tests run before generating report
 
             // Set the source sets for which you want to generate coverage
-            sourceSets {
-                test {
-                    groovy {
-                        srcDirs = [layout.buildDirectory.dir('jacoco/classpathdumps').get().asFile]
-                    }
-                }
-            }
+            sourceSets.test
 
             executionData fileTree(dir: "${buildDir}/jacoco", include: ['*.exec'])
 
