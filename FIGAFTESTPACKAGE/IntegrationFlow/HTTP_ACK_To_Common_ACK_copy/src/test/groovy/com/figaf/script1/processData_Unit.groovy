@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.mockito.Mock
 import org.mockito.junit.jupiter.MockitoExtension
+import static org.junit.jupiter.api.Assertions.*
 
 import static org.mockito.ArgumentMatchers.any
 import static org.mockito.BDDMockito.given
@@ -45,7 +46,35 @@ class processData_Unit {
 
     @Test
     void testProcessDataWithSampleBody() {
-        def body = ''''''
+        def body = '''<?xml version="1.0" encoding="UTF-8"?>
+<AcknowledgementMetadata>
+    <AcknowledgementFor>Orders</AcknowledgementFor>
+    <AcknowledgementForFileName>Order_1.xml</AcknowledgementForFileName>
+    <SentDateTime>22-03-2024T22:32:22</SentDateTime>
+    <Receipt expected="true">
+        <ExpectedBy>22-03-2024T22:32:22</ExpectedBy>
+        <Received>false</Received>
+        <NoAcknowledementProcessCompleted>false</NoAcknowledementProcessCompleted>
+        <NotificationRecipients>anuj.batra@tcs.com</NotificationRecipients>
+    </Receipt>
+    <Processed expected="true">
+        <ExpectedBy>22-03-2024T22:32:22</ExpectedBy>
+        <Received>false</Received>
+        <NoAcknowledementProcessCompleted>false</NoAcknowledementProcessCompleted>
+        <NotificationRecipients>anuj.batra@tcs.com</NotificationRecipients>
+    </Processed>
+    <Technical>
+        <NoReceiptAckProcessor>/cba/acknowledgements/noFileAck</NoReceiptAckProcessor>
+        <NoProcessedAckProcessor>/cba/acknowledgements/noFileAck</NoProcessedAckProcessor>
+    </Technical>
+</AcknowledgementMetadata>'''
+        message.setBody(body)
+        MessageImpl actualMessage = processData(message);
+
+
+
+
+        assertEquals("ORDERS", )
     }
 
 }
