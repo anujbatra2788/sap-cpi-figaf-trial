@@ -13,17 +13,19 @@ import org.mockito.Mock
 import org.mockito.junit.jupiter.MockitoExtension
 import static org.junit.jupiter.api.Assertions.*
 
+import spock.lang.Shared
+import spock.lang.Specification
+
 import static org.mockito.ArgumentMatchers.any
 import static org.mockito.BDDMockito.given
 
-// src/main/resources/script/script1.groovy
 
-@ExtendWith(MockitoExtension)
-class processData_Unit extends Speci{
 
-    private static def script
+class processData_Unit extends Specification {
 
-    static GroovyShell shell = null
+    @Shared GroovyShell shell = new GroovyShell()
+    @Shared Script script
+
     static jsonSlurper = null
 
     @Mock(lenient = true)
