@@ -65,7 +65,7 @@ class processData_Unit extends Specification {
         given: "Orders Acknowledgement message"
         this.msg.setBody(body);
 
-        when: "we execute the Groovy script"
+        when: "we execute the CPI Groovy script"
         script.processData(this.msg)
 
         then: "we get the AcknowledgementFor tag populated with the uppercase of its own value"
