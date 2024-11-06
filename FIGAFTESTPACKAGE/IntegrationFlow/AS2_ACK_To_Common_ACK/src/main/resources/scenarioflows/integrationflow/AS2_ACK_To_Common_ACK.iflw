@@ -363,14 +363,6 @@
                     <value>SAP BASIS 7.31</value>
                 </ifl:property>
                 <ifl:property>
-                    <key>as2MsgIdDupCheck</key>
-                    <value>0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>fileNameMandatoryCheck</key>
-                    <value>0</value>
-                </ifl:property>
-                <ifl:property>
                     <key>partnerAS2Name</key>
                     <value>Files_com</value>
                 </ifl:property>
@@ -380,7 +372,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>encryptRMPersistence</key>
-                    <value>true</value>
+                    <value>false</value>
                 </ifl:property>
                 <ifl:property>
                     <key>verifyMDNSignature</key>
@@ -403,10 +395,6 @@
                     <value/>
                 </ifl:property>
                 <ifl:property>
-                    <key>as2PidSource</key>
-                    <value>authorizedUser</value>
-                </ifl:property>
-                <ifl:property>
                     <key>ComponentType</key>
                     <value>AS2</value>
                 </ifl:property>
@@ -416,10 +404,6 @@
                 </ifl:property>
                 <ifl:property>
                     <key>verifyMIC</key>
-                    <value>0</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>fileNameDupCheck</key>
                     <value>0</value>
                 </ifl:property>
                 <ifl:property>
@@ -440,11 +424,11 @@
                 </ifl:property>
                 <ifl:property>
                     <key>numberConcurrentProcesses</key>
-                    <value>1</value>
+                    <value>3</value>
                 </ifl:property>
                 <ifl:property>
                     <key>pidSource</key>
-                    <value>as2PartnerId</value>
+                    <value>authorizedUser</value>
                 </ifl:property>
                 <ifl:property>
                     <key>TransportProtocol</key>
