@@ -43,3 +43,6 @@ project (":DropboxAdapterforSAPIntegrationSuite").projectDir = file("DropboxAdap
 include "MicrosoftSharePointAdapterforSAPIntegrationSuite"
 project (":MicrosoftSharePointAdapterforSAPIntegrationSuite").projectDir = file("MicrosoftSharePointAdapterforSAPIntegrationSuite")
 
+include "FIGAFTESTPACKAGE:iflow-AS2_ACK_To_Common_ACK"
+project (":FIGAFTESTPACKAGE:iflow-AS2_ACK_To_Common_ACK").projectDir = file("FIGAFTESTPACKAGE/IntegrationFlow/AS2_ACK_To_Common_ACK")
+
