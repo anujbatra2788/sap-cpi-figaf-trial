@@ -1,0 +1,4 @@
+#Thu Aug 08 08:38:11 UTC 2024
+TPM_IDOC_SND_Address=/ms2/tpm/b2b/idoc/
+EXTRACTION_PROCESS_ADDRESS=/tpm/sender/com/flow
+TPM_IDOC_SND_User_Role=ESBMessaging.send

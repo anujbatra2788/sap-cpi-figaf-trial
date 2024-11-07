@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xml:base="https://it-cpitrial05-design-service.cfapps.us10-001.hana.ondemand.com:443/odata/1.0/workspace.svc/">
+  <id>https://it-cpitrial05-design-service.cfapps.us10-001.hana.ondemand.com:443/odata/1.0/workspace.svc/ContentPackages('B2BIntegrationFactoryCommunicationSenderFlows')</id>
+  <title type="text">ContentPackages</title>
+  <updated>2024-11-07T04:50:10.125Z</updated>
+  <category term="ContentPackageModel.ContentPackage" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"/>
+  <link href="ContentPackages('B2BIntegrationFactoryCommunicationSenderFlows')" rel="edit" title="ContentPackage"/>
+  <link href="ContentPackages('B2BIntegrationFactoryCommunicationSenderFlows')/Artifacts" rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Artifacts" title="Artifacts" type="application/atom+xml;type=feed"/>
+  <link href="ContentPackages('B2BIntegrationFactoryCommunicationSenderFlows')/Files" rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Files" title="Files" type="application/atom+xml;type=feed"/>
+  <link href="ContentPackages('B2BIntegrationFactoryCommunicationSenderFlows')/Urls" rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Urls" title="Urls" type="application/atom+xml;type=feed"/>
+  <link href="ContentPackages('B2BIntegrationFactoryCommunicationSenderFlows')/MediaLinks" rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/MediaLinks" title="MediaLinks" type="application/atom+xml;type=feed"/>
+  <link href="ContentPackages('B2BIntegrationFactoryCommunicationSenderFlows')/Licenses" rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Licenses" title="Licenses" type="application/atom+xml;type=feed"/>
+  <content type="application/xml">
+    <m:properties>
+      <d:TechnicalName>B2BIntegrationFactoryCommunicationSenderFlows</d:TechnicalName>
+      <d:DisplayName>B2B Integration Factory - Communication Sender Flows</d:DisplayName>
+      <d:ShortText>This package includes additional sender communication flows for TPM B2B. These sender flows connect to the custom integration flow Step 1b: 'Sender Interchange Header Extraction Flow'.</d:ShortText>
+      <d:reg_id>aa331161746f4d80844260647598e84b</d:reg_id>
+      <d:Featured m:null="true"/>
+      <d:Scope m:null="true"/>
+      <d:Description>&lt;p&gt;This integration package provides additional sender communication flows, such as picking up the messages via an SFTP server. Those integration flows are connected via a ProcessDirect Adapter calling the custom integration flow "Step 1b - Sender Interchange Header Extraction Flow".&lt;/p&gt; &lt;p&gt;It also includes an integration flow called "Step 1a - B2B Simulation Sender," which is necessary if you want to perform an end-to-end simulation via an API tool where you would like to see the result (target interchange/message payloads) in the HTTP response.&amp;nbsp;&lt;/p&gt; &lt;p&gt;Furthermore, you'll find a template that you can use to create your own communication sender flow.&lt;/p&gt;</d:Description>
+      <d:Version>1.1.0</d:Version>
+      <d:Category>Integration</d:Category>
+      <d:Mode>EDIT_ALLOWED</d:Mode>
+      <d:Vendor>SAP</d:Vendor>
+      <d:OrgName>INTELLIGENCE_DELIVERY_GROUP</d:OrgName>
+      <d:BusinessProcess m:null="true"/>
+      <d:SupportedPlatforms>SAP HANA Cloud Integration</d:SupportedPlatforms>
+      <d:Products>SAPCloudPlatformIntegration,SAPCloudPlatform,ThirdParty</d:Products>
+      <d:Industries m:null="true"/>
+      <d:LineOfBusiness m:null="true"/>
+      <d:Keywords m:null="true"/>
+      <d:Countries m:null="true"/>
+      <d:AvgRating>0.0</d:AvgRating>
+      <d:RatingCount>0</d:RatingCount>
+      <d:PublishedAt m:null="true"/>
+      <d:PublishedBy m:null="true"/>
+      <d:CreatedAt>2024-11-07T04:16:43.263</d:CreatedAt>
+      <d:CreatedBy>anuj.batra@tcs.com</d:CreatedBy>
+      <d:ModifiedAt>2024-11-07T04:16:43.273</d:ModifiedAt>
+      <d:ModifiedBy>anuj.batra@tcs.com</d:ModifiedBy>
+      <d:PartnerContent>false</d:PartnerContent>
+      <d:CertifiedBySap>false</d:CertifiedBySap>
+      <d:CommunityContent>true</d:CommunityContent>
+      <d:LicenseType>Apache 2.0</d:LicenseType>
+      <d:SupportInfo m:null="true"/>
+      <d:AdditionalAttributes m:null="true"/>
+      <d:CommercialContent m:null="true"/>
+      <d:AppCenterTechName m:null="true"/>
+      <d:PartnerCRMBP m:null="true"/>
+      <d:Type m:null="true"/>
+      <d:SubType m:null="true"/>
+    </m:properties>
+  </content>
+</entry>

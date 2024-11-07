@@ -1,0 +1,7 @@
+#Thu Aug 08 08:37:35 UTC 2024
+User_name=dummy_user
+EXTRACTION_PROCESS_ADDRESS=/tpm/sender/com/flow
+File_name=
+SFTP_Address=host_address
+Directory=dummy
+Private_Key_Alias=dummy_private_key_alias

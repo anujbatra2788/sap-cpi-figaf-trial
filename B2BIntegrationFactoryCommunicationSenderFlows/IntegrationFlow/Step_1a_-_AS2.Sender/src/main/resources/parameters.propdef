@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><parameters><parameter>
+    <key/>
+    <name>AS2_URL</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>Receiver_ProcessDirect_Address</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>Own_AS2_ID</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><param_references><reference attribute_category="CommunicationSenderFlow" attribute_id="ctype::Adapter/cname::ProcessDirect/vendor::SAP/version::1.1.2/attrId::address" attribute_uilabel="Address" param_key="Receiver_ProcessDirect_Address"/><reference attribute_category="AS2_Sender" attribute_id="ctype::Adapter/cname::AS2/version::1.15.0/attrId::ownAS2Name" attribute_uilabel="Own AS2 ID" param_key="Own_AS2_ID"/><reference attribute_category="AS2_Sender" attribute_id="ctype::Adapter/cname::AS2/version::1.15.0/attrId::address" attribute_uilabel="Address" param_key="AS2_URL"/></param_references></parameters>

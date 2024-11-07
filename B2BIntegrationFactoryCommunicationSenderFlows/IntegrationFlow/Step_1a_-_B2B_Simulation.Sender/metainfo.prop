@@ -1,0 +1,5 @@
+#Store metainfo properties
+#Thu Nov 07 04:50:15 UTC 2024
+description=Receives messages from sender via HTTP/HTTPS protocol and hands over to step 1b flow.
+source=ThirdParty
+target=SAPCloudPlatformIntegration

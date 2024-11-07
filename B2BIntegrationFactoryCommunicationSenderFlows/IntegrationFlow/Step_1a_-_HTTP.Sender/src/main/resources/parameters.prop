@@ -1,0 +1,5 @@
+#Thu Aug 08 12:18:57 UTC 2024
+HTTPS_Address=/tpm/b2b/http
+SAP_B2B_WaitingTime=3000
+HTTP_Response_DataStore=SAP_B2B_HTTP_SynchronousResponsePayloads
+ProcessDirect_Address=/tpm/sender/com/flow

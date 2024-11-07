@@ -1,0 +1,5 @@
+#Store metainfo properties
+#Thu Nov 07 04:50:13 UTC 2024
+description=Receives messages via AS2 protocol, identifies type system and writes payload and header parameters into message queue
+source=ThirdParty
+target=SAPCloudPlatformIntegration

@@ -46,3 +46,30 @@ project (":MicrosoftSharePointAdapterforSAPIntegrationSuite").projectDir = file(
 include "FIGAFTESTPACKAGE:iflow-AS2_ACK_To_Common_ACK"
 project (":FIGAFTESTPACKAGE:iflow-AS2_ACK_To_Common_ACK").projectDir = file("FIGAFTESTPACKAGE/IntegrationFlow/AS2_ACK_To_Common_ACK")
 
+include "B2BIntegrationFactoryCommunicationSenderFlows"
+project (":B2BIntegrationFactoryCommunicationSenderFlows").projectDir = file("B2BIntegrationFactoryCommunicationSenderFlows")
+
+include "B2BIntegrationFactoryCommunicationSenderFlows:iflow-Step_1a_-_HTTP.Sender"
+project (":B2BIntegrationFactoryCommunicationSenderFlows:iflow-Step_1a_-_HTTP.Sender").projectDir = file("B2BIntegrationFactoryCommunicationSenderFlows/IntegrationFlow/Step_1a_-_HTTP.Sender")
+
+include "B2BIntegrationFactoryCommunicationSenderFlows:iflow-Step_1a_-_AS2.Sender"
+project (":B2BIntegrationFactoryCommunicationSenderFlows:iflow-Step_1a_-_AS2.Sender").projectDir = file("B2BIntegrationFactoryCommunicationSenderFlows/IntegrationFlow/Step_1a_-_AS2.Sender")
+
+include "B2BIntegrationFactoryCommunicationSenderFlows:iflow-Step_1a_-_SOAP.Sender"
+project (":B2BIntegrationFactoryCommunicationSenderFlows:iflow-Step_1a_-_SOAP.Sender").projectDir = file("B2BIntegrationFactoryCommunicationSenderFlows/IntegrationFlow/Step_1a_-_SOAP.Sender")
+
+include "B2BIntegrationFactoryCommunicationSenderFlows:iflow-Step_1a_-_B2B_Simulation.Sender"
+project (":B2BIntegrationFactoryCommunicationSenderFlows:iflow-Step_1a_-_B2B_Simulation.Sender").projectDir = file("B2BIntegrationFactoryCommunicationSenderFlows/IntegrationFlow/Step_1a_-_B2B_Simulation.Sender")
+
+include "B2BIntegrationFactoryCommunicationSenderFlows:iflow-Step_1a_-_IDOC.Sender"
+project (":B2BIntegrationFactoryCommunicationSenderFlows:iflow-Step_1a_-_IDOC.Sender").projectDir = file("B2BIntegrationFactoryCommunicationSenderFlows/IntegrationFlow/Step_1a_-_IDOC.Sender")
+
+include "B2BIntegrationFactoryCommunicationSenderFlows:iflow-Step_1a_-_SOAP_Cloud_Sender"
+project (":B2BIntegrationFactoryCommunicationSenderFlows:iflow-Step_1a_-_SOAP_Cloud_Sender").projectDir = file("B2BIntegrationFactoryCommunicationSenderFlows/IntegrationFlow/Step_1a_-_SOAP_Cloud_Sender")
+
+include "B2BIntegrationFactoryCommunicationSenderFlows:iflow-Step_1a_-_TEMPLATE.Sender"
+project (":B2BIntegrationFactoryCommunicationSenderFlows:iflow-Step_1a_-_TEMPLATE.Sender").projectDir = file("B2BIntegrationFactoryCommunicationSenderFlows/IntegrationFlow/Step_1a_-_TEMPLATE.Sender")
+
+include "B2BIntegrationFactoryCommunicationSenderFlows:iflow-Step_1a_-_SFTP.Sender"
+project (":B2BIntegrationFactoryCommunicationSenderFlows:iflow-Step_1a_-_SFTP.Sender").projectDir = file("B2BIntegrationFactoryCommunicationSenderFlows/IntegrationFlow/Step_1a_-_SFTP.Sender")
+

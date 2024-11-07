@@ -1,0 +1,4 @@
+#Thu Aug 08 12:01:00 UTC 2024
+AS2_URL=/tpm/b2b/as2
+Receiver_ProcessDirect_Address=/tpm/sender/com/flow
+Own_AS2_ID=.*

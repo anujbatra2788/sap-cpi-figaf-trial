@@ -1,0 +1,5 @@
+#Store metainfo properties
+#Thu Nov 07 04:50:16 UTC 2024
+description=Receives messages from sender via HTTP/HTTPS protocol and provides a response in synchronous call, if required.
+source=ThirdParty
+target=SAPCloudPlatformIntegration
