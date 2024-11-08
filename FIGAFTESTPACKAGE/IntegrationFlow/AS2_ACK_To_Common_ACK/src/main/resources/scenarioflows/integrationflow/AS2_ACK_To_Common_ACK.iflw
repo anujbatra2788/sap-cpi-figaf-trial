@@ -356,7 +356,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>failMessageOnNegativeMDN</key>
-                    <value>0</value>
+                    <value>1</value>
                 </ifl:property>
                 <ifl:property>
                     <key>ComponentSWCVName</key>
@@ -364,7 +364,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>partnerAS2Name</key>
-                    <value>Files_com</value>
+                    <value>.*</value>
                 </ifl:property>
                 <ifl:property>
                     <key>publicKeyAliasForMDNVerification</key>
